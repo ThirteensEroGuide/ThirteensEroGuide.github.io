@@ -1,0 +1,1 @@
+import{o as r,c as s}from"./index.a3c7c8f7.js";const a=(e,t)=>{const c=e.__vccOpts||e;for(const[n,o]of t)c[n]=o;return c},_={};function i(e,t){return r(),s("main",null," GuideView ")}const l=a(_,[["render",i]]);export{l as default};
