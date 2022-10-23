@@ -22,6 +22,11 @@ const LINK_RTP = 'https://www.rpgmakerweb.com/run-time-package';
 const DLsite = 'https://www.dlsite.com/maniax/';
 const nyaa = 'https://sukebei.nyaa.si/';
 const f95 = 'https://f95zone.to/';
+const itchio = 'https://itch.io/games/tag-adult';
+const nutaku = 'https://www.nutaku.net/home/';
+const johren = 'https://www.johren.net/';
+
+const yuuka = 'https://www.dlsite.com/home/work/=/product_id/RJ403038.html/?locale=en_US';
 </script>
 
 <template>
@@ -174,31 +179,88 @@ const f95 = 'https://f95zone.to/';
                 Where to find <span class="red bold">The Goods</span>
             </span>
             <span class="text">
-                Now that we're finally done with the tools and you hopefully picked up at least the Required and Recommended ones, I will introduce some sites that are incredibly useful for finding and downloading eroge.
+                Now that we're finally done with the tools and you hopefully picked up at least the Required and Recommended ones, I will introduce some sites that are incredibly useful for discovering and downloading eroge.
                 A small disclaimer here: Keep in mind that we will be wading in somewhat dubious waters. Take appropriate precautions and ideally use a VPN.
             </span>
             <span class="subtitle"><a :href=DLsite target="_blank" rel="noopener norefferer">DLsite</a></span>
+            <span class="text">
+                DLsite is basically the Steam of Japanese multimedia, whether that is music, manga, doujinshi, or 1.47GB of Yuuka from Blue Archive doing sleeping ASMR for about $9.00 (<a :href=yuuka target="_blank" rel="noopener norefferer">no joke</a>).
+                It is also the proper way of obtaining whatever eroge you want to play without having to resort to more dubious methods I will tell you about further below. Of course this costs you money, but if you want to support the creators, this is the
+                way to go.<br>
+                <br>
+                For us the following two categories are relevant: The <i>'Doujin'</i> category and the <i>'H Games'</i> category. <br>
+                Under the 'Doujin' category you will find games that were either made by a single person or by small, so-called circles.
+                A circle is more or less the equivalent to a publisher; however, while some big companies like Yostar are registered as a circle on DLsite, circles themselves can sometimes be nothing more
+                than a loose cooperation between certain programmers and artists working under a united banner to get a bigger audience for their indie games. There are some genuinely great games in this category
+                (in fact, many of my recommendations will be from here), so don't sleep on it.<br>
+                <br>
+                The latter category features games by more established companies, such as Kiss and ALICE SOFT. You can expect to see prices more akin to proper video game releases on there, so typically between $20 - $60 USD.
+                Suffice to say the games you'll find here are also significantly longer and arguably more polished than some of the games in the first category, which justifies the higher price. That of course is only relevant to
+                you if you want to stay on the morally correct side of things. In case you are not, give the next two entries a read.
+                
+                <div class="unselectable image-wrapper">
+                    <img src="../assets/images/dlsite.png" />
+                </div>
 
+                The nice thing about DLsite and its community is that many developers publish a demo version of their game you can try out for free before buying the actual game. This not only helps you in deciding whether you like
+                a game or not, but also helps you figuring out if the game has any compatibility issues that need to be taken care of with the tools I have listed above.
+            </span> 
             <span class="subtitle"><a :href=nyaa target="_blank" rel="noopener norefferer">sukebei.nyaa.si</a></span>
             <span class="text">
-                Whenever people ask me about how to get into eroge, I tell them that they have very good friends - sukebei.nyaa.si is one of them. If you are into anime (high chance you are, let's be real)
-                you might have come across nyaa.si, sukebei.nyaa.si is basically its R18 version.<br>
+                Whenever people ask me about how to get into eroge, I tell them that they have two best friends when it comes to obtaining eroge in a more accessible way. Yeah, sukebei.nyaa.si is one of these friends.
+                If you are into anime (high chance you are, let's be real) you might have come across nyaa.si — sukebei.nyaa.si is basically its R18 version.<br>
+                <br>
                 What we are mainly interested in here are the games, so head to the categories filter next to the search bar at the top, select 'Games' and click on the search button.
+                You're now able to see the most recent uploads by the community. If you're interested in a specific game, you can obviously use the search bar too.
+
+                <div class="unselectable image-wrapper">
+                    <img src="../assets/images/nyaa_intro.gif" />
+                </div>
+
+                Once you have found a game you want to download, either click on the title and download the torrent file or use the provided magnet link. Main difference being that
+                torrent files are downloaded from a webserver while magnet links allow you to directly download from seeds and leechers because the link already contains the calculated hash needed for the torrenting process. Without going into any further technical details
+                (if you're interested, google is your friend), the first option will basically give you a <span class="code-fragment">.torrent</span> file that has to be opened with your torrenting tool of choice, while magnet links are typically automatically opened by your program.<br>
+                Tl;dr: If you have the possibility using a magnet link, do so.
+
             </span>
             <span class="subtitle"><a :href=f95 target="_blank" rel="noopener norefferer">f95zone</a></span>
-
+            <span class="text">
+                Last but not least I'd like to mention the other best friend you'll have on your eroge journey, and believe me when I say that it's an absolute gem. A bit reminiscent of old-school forums, f95zone 
+                — or just f95 — is a community of absolute degenerates providing download links for almost any imaginable eroge, organizing fan translations (even if it's just a machine translation, also jokingly referred to as 'poetry'), 
+                publishing uncensor patches, suggesting you games and so much more.<br>
+                <br>
+                The only downside is that the site requires you to have an account. But after you've done that, your entire search process will simply consist of typing '{Name of the Eroge} f95' into your google search and in 49/50
+                times you'll find a forum entry with the game and installation instructions provided. More often than not the game thread will also feature mods, patches and comments/questions by other users commenting on 
+                potential issues.<br>
+            </span>
+            <span class="disclaimer text">
+                Please be aware that f95zone does not allow any loli or shota content on its site. For that refer to sukebei.nyaa.si.
+            </span>
+            <div class="half-sep-space"></div>
+            <span class="disclaimer text">
+                <span class="bold">Important</span>: The name of the game on DLsite and the name of the game for the game thread on f95zone can sometimes vary greatly. Don't be immediately discouraged when you don't find a game thread, sometimes it's just named differently.
+                Try searching with the japanese game name instead (you can toggle the language on DLsite in the top right corner) or only use certain keywords of the title + f95 in your google search. Chances are pretty high that there is a thread
+                if the game is on DLsite.
+            </span>
+            <div class="sep-space"></div>
+            <div class="half-sep-space"></div>
             <span class="subtitle" style="font-weight: normal">Honorable Mentions:</span>
+            <span class="text">
+                <a :href=itchio target="_blank" rel="noopener norefferer">itch.io</a> — Actually a site for indie devs to publish their games on. You can filter for R18 stuff and find some explicit non-Japanese games on there.<br>
+                <a :href=nutaku target="_blank" rel="noopener norefferer">Nutaku</a> — Probably the most known western publisher for eroge. Unfortunately a lot of junk you have to dig through.<br>
+                <a :href=johren target="_blank" rel="noopener norefferer">Johren</a> — Similar to Nutaku but slightly different product range.<br>
+            </span>
 
             <span class="unselectable title">
                 An <span class="red bold">Example</span>
             </span>
 
             <span class="unselectable title">
-                <span class="red bold">Tl;dr</span>
+                What to do if you're on <span class="red bold">Linux/Mac</span>
             </span>
 
             <span class="unselectable title">
-                What to do if you're on <span class="red bold">Linux/Mac</span>
+                <span class="red bold">Tl;dr</span>
             </span>
         </div>
     </main>
@@ -273,8 +335,16 @@ const f95 = 'https://f95zone.to/';
     }
 
     .image-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+
         img {
             border-radius: 5px;
+            max-width: 100%;
+            pointer-events: none;
         }
     }
 
