@@ -1,7 +1,7 @@
 <script setup lang="ts">
-  import { RouterLink } from 'vue-router'
+import { RouterLink } from 'vue-router'
 
-  const KOHARU_SRC = 'https://twitter.com/azihurai3/status/1494533093788557312';
+const KOHARU_SRC = 'https://twitter.com/azihurai3/status/1494533093788557312';
 </script>
 
 <template>
@@ -19,7 +19,7 @@
       <div class="separator"><hr /></div>
       <div class="r18-image-wrapper">
         <a :href=KOHARU_SRC target="_blank" rel="noopener norefferer" class="hoverer"></a>
-        <img src="../assets/images/koharu_warning.png" class="r18-image"/>
+        <img src="../assets/images/koharu_warning.png" class="unselectable r18-image"/>
       </div>
       <div class="separator"><hr /></div>
     </div>
@@ -30,21 +30,7 @@
   </main>
 </template>
 
-<style lang="scss">
-  .unselectable {
-    user-select: none;
-    -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-    -o-user-select: none;
-  }
-
-  .page {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
+<style scoped lang="scss">
   .title {
     text-align: center;
 
@@ -103,6 +89,7 @@
     margin-top: -4em;
     z-index: 1000;
     padding: 0.5em;
+    text-decoration: none;
   }
 
   .r18-image {
@@ -130,8 +117,8 @@
     line-height: 1;
     text-transform: uppercase;
 
-    border-color: red;
-    border: 3px solid 12px;
+    border: 3px solid red;
+    border-radius: 12px;
 
     padding: 0.5em 1em;
     margin: 0.25em;
