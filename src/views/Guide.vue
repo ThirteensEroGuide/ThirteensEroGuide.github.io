@@ -12,11 +12,16 @@ const XUNITY_INST = 'https://github.com/bbepis/XUnity.AutoTranslator#installatio
 
 const LINK_WINRAR = 'https://www.win-rar.com/';
 const LINK_7ZIP = 'https://www.7-zip.org/';
+const LINK_QBIT = 'https://www.qbittorrent.org/download.php';
 const LINK_LE = 'https://pooi.moe/Locale-Emulator/';
 const LINK_NTLEA = 'https://github.com/zxyacb/ntlea/releases';
 const LINK_TEXTR = 'https://github.com/Artikash/Textractor/releases';
 const LINK_XUNITY = 'https://github.com/bbepis/XUnity.AutoTranslator/releases/tag/v5.2.0';
 const LINK_RTP = 'https://www.rpgmakerweb.com/run-time-package';
+
+const DLsite = 'https://www.dlsite.com/maniax/';
+const nyaa = 'https://sukebei.nyaa.si/';
+const f95 = 'https://f95zone.to/';
 </script>
 
 <template>
@@ -66,7 +71,14 @@ const LINK_RTP = 'https://www.rpgmakerweb.com/run-time-package';
                 It doesn't really matter which of the two. WinRar infamously starts pesting you after the 40-day trial ends (don't worry, you will still be able to use it) — but really, it doesn't matter.
             </span>
             <div class="app-wrapper">
-                <span class="subtitle">2. LEGUI</span><Badge content="Recommended" class="bg-rec"></Badge>
+                <span class="subtitle">2. qBittorrent</span><Badge content="Recommended" class="bg-rec"></Badge>
+            </div>
+            <span class="dl text"><a :href=LINK_QBIT target="_blank" rel="noopener norefferer">qBittorrent (Download)</a></span>
+            <span class="text">
+                Any torrenting tool will do, but I personally prefer qBittorrent. If you already have one, skip this, but if not, just install the program like you would any other one and use it whenever you have a magnet link/torrent that you want to download.
+            </span>
+            <div class="app-wrapper">
+                <span class="subtitle">3. LEGUI</span><Badge content="Recommended" class="bg-rec"></Badge>
             </div>
             <span class="dl text"><a :href=LINK_LE target="_blank" rel="noopener norefferer">LE (Download)</a></span>
             <span class="text">
@@ -100,7 +112,7 @@ const LINK_RTP = 'https://www.rpgmakerweb.com/run-time-package';
                 However, I highly suggest to install LE (and NTLEA) instead, as changing your locale can come with certain, sometimes unwanted side effects.
             </span>
             <div class="app-wrapper">
-                <span class="subtitle">3. NTLEA</span><Badge content="Recommended" class="bg-rec"></Badge>
+                <span class="subtitle">4. NTLEA</span><Badge content="Recommended" class="bg-rec"></Badge>
             </div>
             <span class="dl text"><a :href=LINK_NTLEA target="_blank" rel="noopener norefferer">NTLEA (Download)</a></span>
             <span class="text">
@@ -114,7 +126,7 @@ const LINK_RTP = 'https://www.rpgmakerweb.com/run-time-package';
                 In order to run your game, you'll have to click on 'Open Config Dialog', make sure that the just mentioned codepage and locale settings are set to Japanese and click on 'Save & Run' at the bottom.
             </span>
             <div class="app-wrapper">
-                <span class="subtitle">4. Textractor</span><Badge content="Optional" class="bg-opt"></Badge>
+                <span class="subtitle">5. Textractor</span><Badge content="Optional" class="bg-opt"></Badge>
             </div>
             <span class="dl text"><a :href=LINK_TEXTR target="_blank" rel="noopener norefferer">Textractor (Download)</a></span>
             <span class="text">
@@ -135,21 +147,22 @@ const LINK_RTP = 'https://www.rpgmakerweb.com/run-time-package';
                 But if it works it works, and it is definitely still your best all-round option to have.
             </span>
             <div class="app-wrapper">
-                <span class="subtitle">5. XUnity Auto Translator</span><Badge content="Optional" class="bg-opt"></Badge>
+                <span class="subtitle">6. XUnity Auto Translator</span><Badge content="Optional" class="bg-opt"></Badge>
             </div>
             <span class="dl text"><a :href=LINK_XUNITY target="_blank" rel="noopener norefferer">XUnity Auto Translator (Download)</a></span>
             <span class="text">
                 If the game you're about to play was made with Unity, you potentially have a better option than using Textractor. All you have to do in this case is go to the XUnity Auto Translator
                 GitHub release page provided above, download the <span class="code-fragment">XUnity.AutoTranslator-ReiPatcher-5.X.X.zip</span>, extract it into the game folder next to the main <span class="code-fragment">.exe</span> file and run the 
-                <span class="code-fragment">GameExe (Patch and Run).lnk</span>. From that point forward you'll be able to launch the already translated game from the main <span class="code-fragment">.exe</span> file.
+                <span class="code-fragment">GameExe (Patch and Run).lnk</span>. From that point forward you'll be able to launch the game from the main <span class="code-fragment">.exe</span> file.
             </span>
             <span class="disclaimer text">
                 <span class="bold">Important</span>: If the game is using a plugin manager like BepInEx, please refer to the <a :href=XUNITY_INST target="_blank" rel="noopener norefferer">installation section</a> of the GitHub repository. You should avoid using the Standalone version in that case and
                 follow the instructions for the corresponding plugin manager. For example, if the game is using BepInEx, the game folder will contain a BepInEx folder. In that case, refer to the <i>BepInEx Plugin</i> section.
             </span>
             <div class="sep-space"></div>
+            <div class="half-sep-space"></div>
             <div class="app-wrapper">
-                <span class="subtitle">6. RPG Maker RTP</span><Badge content="Optional" class="bg-opt"></Badge>
+                <span class="subtitle">7. RPG Maker RTP</span><Badge content="Optional" class="bg-opt"></Badge>
             </div>
             <span class="dl text"><a :href=LINK_RTP target="_blank" rel="noopener norefferer">RPG Maker RTP (Download)</a></span>
             <span class="text">
@@ -159,6 +172,33 @@ const LINK_RTP = 'https://www.rpgmakerweb.com/run-time-package';
             </span>
             <span class="unselectable title">
                 Where to find <span class="red bold">The Goods</span>
+            </span>
+            <span class="text">
+                Now that we're finally done with the tools and you hopefully picked up at least the Required and Recommended ones, I will introduce some sites that are incredibly useful for finding and downloading eroge.
+                A small disclaimer here: Keep in mind that we will be wading in somewhat dubious waters. Take appropriate precautions and ideally use a VPN.
+            </span>
+            <span class="subtitle"><a :href=DLsite target="_blank" rel="noopener norefferer">DLsite</a></span>
+
+            <span class="subtitle"><a :href=nyaa target="_blank" rel="noopener norefferer">sukebei.nyaa.si</a></span>
+            <span class="text">
+                Whenever people ask me about how to get into eroge, I tell them that they have very good friends - sukebei.nyaa.si is one of them. If you are into anime (high chance you are, let's be real)
+                you might have come across nyaa.si, sukebei.nyaa.si is basically its R18 version.<br>
+                What we are mainly interested in here are the games, so head to the categories filter next to the search bar at the top, select 'Games' and click on the search button.
+            </span>
+            <span class="subtitle"><a :href=f95 target="_blank" rel="noopener norefferer">f95zone</a></span>
+
+            <span class="subtitle" style="font-weight: normal">Honorable Mentions:</span>
+
+            <span class="unselectable title">
+                An <span class="red bold">Example</span>
+            </span>
+
+            <span class="unselectable title">
+                <span class="red bold">Tl;dr</span>
+            </span>
+
+            <span class="unselectable title">
+                What to do if you're on <span class="red bold">Linux/Mac</span>
             </span>
         </div>
     </main>
@@ -250,6 +290,11 @@ const LINK_RTP = 'https://www.rpgmakerweb.com/run-time-package';
 
     .sep-space {
         height: 1em;
+        width: 100%;
+    }
+
+    .half-sep-space {
+        height: 0.5em;
         width: 100%;
     }
 
