@@ -26,6 +26,13 @@ const f95 = 'https://f95zone.to/';
 const itchio = 'https://itch.io/games/tag-adult';
 const nutaku = 'https://www.nutaku.net/home/';
 const johren = 'https://www.johren.net/';
+
+let funCounter = 0;
+
+const toggleFun = () => {
+    funCounter++;
+    console.log(funCounter);
+}
 </script>
 
 <template>
@@ -35,8 +42,11 @@ const johren = 'https://www.johren.net/';
         </div>
 
         <div class="left-aligned text-wrapper">
+
+            <!-- INTRO -->
+
             <span class="unselectable title">
-                Welcome to the <span class="red bold">Fun Zone</span>
+                Welcome to the <span class="red bold" @click="toggleFun">{{ (funCounter % 2 == 0) ? 'Fun Zone' : 'Cum Zone' }}</span>
             </span>
             <span class="text">
                 Although chances are high you already know why you're here, I'll explain what this guide is all about once more, just in case.
@@ -54,8 +64,13 @@ const johren = 'https://www.johren.net/';
                 This guide is mainly tailored for the Microsoft ecosystem (Windows 7 onwards to be precise), simply because we're dealing with a ton of <span class="code-fragment">.exe</span> files here.
                 Compatability is a big factor too. I will mention how to set up things for non-Windows systems here and there, but I cannot guarantee that it'll work.
             </span>
+
+            <div class="separator"><hr /></div>
             <div class="sep-space"></div>
             <div class="sep-space"></div>
+            
+            <!-- TOOLS -->
+            
             <span class="unselectable title">
                 The <span class="red bold">Tools</span>
             </span>
@@ -174,6 +189,11 @@ const johren = 'https://www.johren.net/';
                 to minimize the file size in which games need to be shipped out. Out of all the games I have downloaded I only needed it twice so far, but if you want to avoid any complications with that altogether, click on the link above and download the RTP for <span class="bold">VX Ace</span>.
                 Depending on the RPG Maker game (and thus the age of the game) you might require another version, but so far I only needed the VX Ace one.
             </span>
+
+            <div class="separator"><hr /></div>
+            <div class="sep-space"></div>
+            <div class="sep-space"></div>
+
             <span class="unselectable title">
                 Where to find <span class="red bold">The Goods</span>
             </span>
@@ -249,13 +269,25 @@ const johren = 'https://www.johren.net/';
                 <a :href=johren target="_blank" rel="noopener norefferer">Johren</a> — Similar to Nutaku but slightly different product range.<br>
             </span>
 
+            <div class="separator"><hr /></div>
+            <div class="sep-space"></div>
+            <div class="sep-space"></div>
+
             <span class="unselectable title">
                 An <span class="red bold">Example</span>
             </span>
 
+            <div class="separator"><hr /></div>
+            <div class="sep-space"></div>
+            <div class="sep-space"></div>
+
             <span class="unselectable title">
                 What to do if you're on <span class="red bold">Linux/Mac</span>
             </span>
+
+            <div class="separator"><hr /></div>
+            <div class="sep-space"></div>
+            <div class="sep-space"></div>
 
             <span class="unselectable title">
                 <span class="red bold">Tl;dr</span>
@@ -355,6 +387,14 @@ const johren = 'https://www.johren.net/';
         display: flex;
         flex-direction: column;
     }
+
+    .separator {
+    padding-top: 2.5em;
+    width: 100%;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    align-self: center;
+  }
 
     .sep-space {
         height: 1em;
