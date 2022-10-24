@@ -9,6 +9,7 @@ const ALT_TUT = 'https://www.336gamereviews.com/how-to-play-japanese-games-on-wi
 const NTLEA_EXAMPLE = 'https://imgur.com/jjzR3Fx';
 const TEXTR_TUT = 'https://www.youtube.com/watch?v=eecEOacF6mw';
 const XUNITY_INST = 'https://github.com/bbepis/XUnity.AutoTranslator#installation';
+const yuuka = 'https://www.dlsite.com/home/work/=/product_id/RJ403038.html/?locale=en_US';
 
 const LINK_WINRAR = 'https://www.win-rar.com/';
 const LINK_7ZIP = 'https://www.7-zip.org/';
@@ -25,8 +26,6 @@ const f95 = 'https://f95zone.to/';
 const itchio = 'https://itch.io/games/tag-adult';
 const nutaku = 'https://www.nutaku.net/home/';
 const johren = 'https://www.johren.net/';
-
-const yuuka = 'https://www.dlsite.com/home/work/=/product_id/RJ403038.html/?locale=en_US';
 </script>
 
 <template>
@@ -219,15 +218,15 @@ const yuuka = 'https://www.dlsite.com/home/work/=/product_id/RJ403038.html/?loca
 
                 Once you have found a game you want to download, either click on the title and download the torrent file or use the provided magnet link. Main difference being that
                 torrent files are downloaded from a webserver while magnet links allow you to directly download from seeds and leechers because the link already contains the calculated hash needed for the torrenting process. Without going into any further technical details
-                (if you're interested, google is your friend), the first option will basically give you a <span class="code-fragment">.torrent</span> file that has to be opened with your torrenting tool of choice, while magnet links are typically automatically opened by your program.<br>
+                (if you're interested, google is your friend), the first option will basically give you a <span class="code-fragment">.torrent</span> file that has to be opened with your torrenting tool of choice, while magnet links are typically opened automatically by your program.<br>
                 Tl;dr: If you have the possibility using a magnet link, do so.
 
             </span>
             <span class="subtitle"><a :href=f95 target="_blank" rel="noopener norefferer">f95zone</a></span>
             <span class="text">
-                Last but not least I'd like to mention the other best friend you'll have on your eroge journey, and believe me when I say that it's an absolute gem. A bit reminiscent of old-school forums, f95zone 
-                — or just f95 — is a community of absolute degenerates providing download links for almost any imaginable eroge, organizing fan translations (even if it's just a machine translation, also jokingly referred to as 'poetry'), 
-                publishing uncensor patches, suggesting you games and so much more.<br>
+                Last but not least I'd like to mention the other best friend you'll have on your eroge journey, and believe me when I say that this site is an absolute gem. A bit reminiscent of old-school forums, f95zone 
+                — or just f95 — is a community of absolute degenerates providing download links for almost any eroge imaginable, organizing fan translations (even if it's just a machine translation, also jokingly referred to as 'poetry'), 
+                uploading uncensor patches, suggesting you games and so much more.<br>
                 <br>
                 The only downside is that the site requires you to have an account. But after you've done that, your entire search process will simply consist of typing '{Name of the Eroge} f95' into your google search and in 49/50
                 times you'll find a forum entry with the game and installation instructions provided. More often than not the game thread will also feature mods, patches and comments/questions by other users commenting on 
@@ -239,8 +238,7 @@ const yuuka = 'https://www.dlsite.com/home/work/=/product_id/RJ403038.html/?loca
             <div class="half-sep-space"></div>
             <span class="disclaimer text">
                 <span class="bold">Important</span>: The name of the game on DLsite and the name of the game for the game thread on f95zone can sometimes vary greatly. Don't be immediately discouraged when you don't find a game thread, sometimes it's just named differently.
-                Try searching with the japanese game name instead (you can toggle the language on DLsite in the top right corner) or only use certain keywords of the title + f95 in your google search. Chances are pretty high that there is a thread
-                if the game is on DLsite.
+                Try searching with the japanese game name instead (you can toggle the language on DLsite in the top right corner) or only use certain keywords of the title + f95 in your google search.
             </span>
             <div class="sep-space"></div>
             <div class="half-sep-space"></div>
