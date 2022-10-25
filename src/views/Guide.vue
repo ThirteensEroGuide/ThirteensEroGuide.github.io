@@ -1,37 +1,40 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
-import Badge from '../components/InfoBadge.vue'
+import { ref } from 'vue'
+import Badge from '../components/BadgeComponent.vue'
 
-const EROGE_WIKI = 'https://en.wikipedia.org/wiki/Eroge';
-const LEGUI_SETTINGS = 'https://imgur.com/tZZMLor';
-const LEGUI_EXAMPLE = 'https://imgur.com/2Mhosrp';
-const ALT_TUT = 'https://www.336gamereviews.com/how-to-play-japanese-games-on-windows-10/';
-const NTLEA_EXAMPLE = 'https://imgur.com/jjzR3Fx';
-const TEXTR_TUT = 'https://www.youtube.com/watch?v=eecEOacF6mw';
-const XUNITY_INST = 'https://github.com/bbepis/XUnity.AutoTranslator#installation';
-const yuuka = 'https://www.dlsite.com/home/work/=/product_id/RJ403038.html/?locale=en_US';
+const EROGE_WIKI = 'https://en.wikipedia.org/wiki/Eroge'
+const LEGUI_SETTINGS = 'https://imgur.com/tZZMLor'
+const LEGUI_EXAMPLE = 'https://imgur.com/2Mhosrp'
+const ALT_TUT = 'https://www.336gamereviews.com/how-to-play-japanese-games-on-windows-10/'
+const NTLEA_EXAMPLE = 'https://imgur.com/jjzR3Fx'
+const TEXTR_TUT = 'https://www.youtube.com/watch?v=eecEOacF6mw'
+const XUNITY_INST = 'https://github.com/bbepis/XUnity.AutoTranslator#installation'
+const yuuka = 'https://www.dlsite.com/home/work/=/product_id/RJ403038.html/?locale=en_US'
 
-const LINK_WINRAR = 'https://www.win-rar.com/';
-const LINK_7ZIP = 'https://www.7-zip.org/';
-const LINK_QBIT = 'https://www.qbittorrent.org/download.php';
-const LINK_LE = 'https://pooi.moe/Locale-Emulator/';
-const LINK_NTLEA = 'https://github.com/zxyacb/ntlea/releases';
-const LINK_TEXTR = 'https://github.com/Artikash/Textractor/releases';
-const LINK_XUNITY = 'https://github.com/bbepis/XUnity.AutoTranslator/releases/tag/v5.2.0';
-const LINK_RTP = 'https://www.rpgmakerweb.com/run-time-package';
+const LINK_WINRAR = 'https://www.win-rar.com/'
+const LINK_7ZIP = 'https://www.7-zip.org/'
+const LINK_QBIT = 'https://www.qbittorrent.org/download.php'
+const LINK_LE = 'https://pooi.moe/Locale-Emulator/'
+const LINK_NTLEA = 'https://github.com/zxyacb/ntlea/releases'
+const LINK_TEXTR = 'https://github.com/Artikash/Textractor/releases'
+const LINK_XUNITY = 'https://github.com/bbepis/XUnity.AutoTranslator/releases/tag/v5.2.0'
+const LINK_RTP = 'https://www.rpgmakerweb.com/run-time-package'
 
-const DLsite = 'https://www.dlsite.com/maniax/';
-const nyaa = 'https://sukebei.nyaa.si/';
-const f95 = 'https://f95zone.to/';
-const itchio = 'https://itch.io/games/tag-adult';
-const nutaku = 'https://www.nutaku.net/home/';
-const johren = 'https://www.johren.net/';
+const DLsite = 'https://www.dlsite.com/maniax/'
+const nyaa = 'https://sukebei.nyaa.si/'
+const f95 = 'https://f95zone.to/'
+const itchio = 'https://itch.io/games/tag-adult'
+const nutaku = 'https://www.nutaku.net/home/'
+const johren = 'https://www.johren.net/'
 
-let funCounter = 0;
+let fun = true
+const funMsg = ref('Fun Zone')
 
 const toggleFun = () => {
-    funCounter++;
-    console.log(funCounter);
+    fun = !fun
+    funMsg.value = (fun) ? 'Fun Zone' : 'Cum Zone'
+    console.log(`Switched to the ${fun ? 'regular' : 'real'} fun ~`)
 }
 </script>
 
@@ -46,7 +49,7 @@ const toggleFun = () => {
             <!-- INTRO -->
 
             <span class="unselectable title">
-                Welcome to the <span class="red bold" @click="toggleFun">{{ (funCounter % 2 == 0) ? 'Fun Zone' : 'Cum Zone' }}</span>
+                Welcome to the <span class="red bold" @click="toggleFun">{{ funMsg }}</span>
             </span>
             <span class="text">
                 Although chances are high you already know why you're here, I'll explain what this guide is all about once more, just in case.

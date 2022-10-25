@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { RouterLink } from 'vue-router'
 
-const KOHARU_SRC = 'https://twitter.com/azihurai3/status/1494533093788557312';
+const KOHARU_SRC = 'https://twitter.com/azihurai3/status/1494533093788557312'
 </script>
 
 <template>

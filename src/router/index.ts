@@ -7,12 +7,15 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: Home
+      component: Home,
+      meta: {
+        hideHeader: true
+      }
     },
     {
       path: '/guide',
       name: 'guide',
-      component: () => import('../views/Guide.vue')
+      component: () => import('../views/Guide.vue'),
     }
   ]
 })
