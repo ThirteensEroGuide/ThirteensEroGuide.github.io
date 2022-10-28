@@ -1,9 +1,6 @@
 <script setup lang="ts">
-import { RouterLink } from 'vue-router'
-import { ref } from 'vue'
 import Badge from '../components/BadgeComponent.vue'
 
-const EROGE_WIKI = 'https://en.wikipedia.org/wiki/Eroge'
 const LEGUI_SETTINGS = 'https://imgur.com/tZZMLor'
 const LEGUI_EXAMPLE = 'https://imgur.com/2Mhosrp'
 const ALT_TUT = 'https://www.336gamereviews.com/how-to-play-japanese-games-on-windows-10/'
@@ -27,15 +24,7 @@ const f95 = 'https://f95zone.to/'
 const itchio = 'https://itch.io/games/tag-adult'
 const nutaku = 'https://www.nutaku.net/home/'
 const johren = 'https://www.johren.net/'
-
-let fun = true
-const funMsg = ref('Fun Zone')
-
-const toggleFun = () => {
-    fun = !fun
-    funMsg.value = (fun) ? 'Fun Zone' : 'Cum Zone'
-    console.log(`Switched to the ${fun ? 'regular' : 'real'} fun ~`)
-}
+const ULMF = 'https://ulmf.org/'
 </script>
 
 <template>
@@ -46,30 +35,15 @@ const toggleFun = () => {
 
         <div class="left-aligned text-wrapper">
 
-            <!-- INTRO -->
+            <!-- DISCLAIMER -->
 
-            <span class="unselectable title">
-                Welcome to the <span class="red bold" @click="toggleFun">{{ funMsg }}</span>
-            </span>
-            <span class="text">
-                Although chances are high you already know why you're here, I'll explain what this guide is all about once more, just in case.
-                This guide is targetted to those who are interested starting with so-called <a :href=EROGE_WIKI target="_blank" rel="noopener norefferer">Eroge</a> (エロゲ, Erotic Game): Japanese games that feature explicit content, mainly graphics of sexual nature, inside them.
-                Unfortunately, many of them are hardly accessible to the average person, especially if you live outside of Japan, which is why I felt compelled to write something that helps you to navigate through this — frankly speaking — absolute mess.
-            </span>
-            <span class="text">
-                If you already know everything and feel comfortable enough getting what you need without this guide, feel free to skip this entire segment by either scrolling down and clicking on the "Recommend Me Something" button, or by clicking <router-link to="/eroge">here</router-link>. 
-                If you feel like you're still unsure, I suggest you stick around and give this bit a read.
-                It might seem long, but I'll try to entertain you as much as I can on your journey to peek degeneracy.<br>
-                So buckle up buckaroo, cuz' this is gonna be quite the wild ride.
-            </span>
+            <div class="sep-space"></div>
             <span class="disclaimer text">
                 <span class="red bold">Disclaimer</span><br>
                 This guide is mainly tailored for the Microsoft ecosystem (Windows 7 onwards to be precise), simply because we're dealing with a ton of <span class="code-fragment">.exe</span> files here.
                 Compatability is a big factor too. I will mention how to set up things for non-Windows systems here and there, but I cannot guarantee that it'll work.
             </span>
 
-            <div class="separator"><hr /></div>
-            <div class="sep-space"></div>
             <div class="sep-space"></div>
             
             <!-- TOOLS -->
@@ -77,6 +51,9 @@ const toggleFun = () => {
             <span class="unselectable title">
                 The <span class="red bold">Tools</span>
             </span>
+            <div class="separator"><hr /></div>
+            <div class="sep-space"></div>
+            <div class="sep-space"></div>
             <span class="text">
                 Before we can actually start with the fun stuff, we need to go through a list of tools you may or may not need in order to play those games.
                 While some games were developed by english speaking folks or have an english localization due to popular demand, many do not, so in order for you to enjoy them we'll have to take a look at certain locale emulators, translation tools, and so on.
@@ -131,7 +108,7 @@ const toggleFun = () => {
                 "Show More Options" tab when right-clicking your application.<br>
                 <br>
                 If nothing works or this is too complicated for you, you also have the option to change your system locale to Japanese and install a Japanese Language Pack as seen in <a :href=ALT_TUT target="_blank" rel="noopener norefferer">this tutorial</a>, in which case the LE and NTLEA installations become superfluous.
-                However, I highly suggest to install LE (and NTLEA) instead, as changing your locale can come with certain, sometimes unwanted side effects.
+                However, I highly suggest to install LE (and NTLEA) instead, as tampering with your locale can come with certain, sometimes unwanted side effects.
             </span>
             <div class="app-wrapper">
                 <span class="subtitle">4. NTLEA</span><Badge content="Recommended" class="bg-rec"></Badge>
@@ -270,6 +247,7 @@ const toggleFun = () => {
                 <a :href=itchio target="_blank" rel="noopener norefferer">itch.io</a> — Actually a site for indie devs to publish their games on. You can filter for R18 stuff and find some explicit non-Japanese games on there.<br>
                 <a :href=nutaku target="_blank" rel="noopener norefferer">Nutaku</a> — Probably the most known western publisher for eroge. Unfortunately a lot of junk you have to dig through.<br>
                 <a :href=johren target="_blank" rel="noopener norefferer">Johren</a> — Similar to Nutaku but slightly different product range.<br>
+                <a :href=ULMF target="_blank" rel="noopener norefferer">ULMF</a> — Unofficial LineMarvel Forum: Very similar to F95, requires an account. If you can't find a thread on F95, try looking for a thread on here.
             </span>
 
             <div class="separator"><hr /></div>
@@ -300,153 +278,5 @@ const toggleFun = () => {
 </template>
 
 <style scoped lang="scss">
-    /* Text Formatting */
-    .title {
-        font-size: 60px;
-        font-weight: 800;
-        text-transform: uppercase;
-        font-family: 'Bahiana', cursive;
-        padding: 0.1em;
-        color: white;
-        text-align: center !important;
-    }
-
-    .subtitle {
-        font-size: 36px;
-        font-weight: 600;
-        color: white;
-        opacity: 0.95;
-    }
-
-    .text {
-        font-size: 18px;
-        font-weight: normal;
-        color: white;
-        opacity: 0.9;
-        padding-bottom: 1.5em;
-    }
-
-    .disclaimer {
-        background-color: #131313;
-        border-radius: 5px;
-        padding: 1em;
-        place-items: center;
-    }
-
-    .code-fragment {
-        font-family: Consolas, monaco, monospace;
-        border-radius: 5px;
-        background-color: #0e0e0e;
-    }
-
-    .red {
-        color: red;
-    }
-
-    .bg-req {
-        background-color: red;
-    }
-
-    .bg-rec {
-        background-color: #18864a;
-    }
-
-    .bg-opt {
-        background-color: rgb(0, 148, 168);
-    }
-
-    .semi-bold {
-        font-weight: 600;
-    }
-
-    .bold {
-        font-weight: 800;
-    }
-
-    .dl {
-        opacity: 0.6;
-    }
-
-    .image-wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-top: 1.5em;
-        padding-bottom: 1.5em;
-
-        img {
-            border-radius: 5px;
-            max-width: 100%;
-            pointer-events: none;
-        }
-    }
-
-    /* Page Alignment */
-    .left-aligned {
-        text-align: left;
-    }
-
-    .text-wrapper {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .separator {
-    padding-top: 2.5em;
-    width: 100%;
-    padding-left: 1.5em;
-    padding-right: 1.5em;
-    align-self: center;
-  }
-
-    .sep-space {
-        height: 1em;
-        width: 100%;
-    }
-
-    .half-sep-space {
-        height: 0.5em;
-        width: 100%;
-    }
-
-    .app-wrapper {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
-    }
-
-    /* Side Menu */
-    .side-menu {
-        position: absolute;
-        /* TODO */
-    }
-
-    /* Link Hover */
-    a {
-        color: inherit;
-        text-decoration: none;
-    }
-
-    a {
-    background:
-        linear-gradient(
-            to right,
-            rgba(255, 255, 255, 1),
-            rgba(255, 255, 255, 1)
-        ),
-        linear-gradient(
-            to right,
-            rgba(255, 0, 0, 1),
-            rgba(255, 0, 180, 1),
-            rgba(0, 100, 200, 1)
-        );
-        background-size: 100% 1px, 0 1px;
-        background-position: 100% 100%, 0 100%;
-        background-repeat: no-repeat;
-        transition: background-size 350ms;
-    }
-    a:hover {
-        background-size: 0 1px, 100% 1px;
-    }
+    @import '../assets/design.scss';
 </style>

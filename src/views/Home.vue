@@ -1,135 +1,39 @@
 <script setup lang="ts">
-import { RouterLink } from 'vue-router'
+import { ref } from 'vue'
 
-const KOHARU_SRC = 'https://twitter.com/azihurai3/status/1494533093788557312'
+const EROGE_WIKI = 'https://en.wikipedia.org/wiki/Eroge'
+
+let fun = true
+const funMsg = ref('Fun Zone')
+
+const toggleFun = () => {
+    fun = !fun
+    funMsg.value = (fun) ? 'Fun Zone' : 'Cum Zone'
+    console.log(`Switched to the ${fun ? 'regular' : 'real'} fun ~`)
+}
 </script>
 
 <template>
-  <main class="page">
-    <!-- TITLE -->
-    <div class="unselectable title">
-      <p class="title-small">Thirteen's</p>
-      <div class="title-txt">
-        <p id="title-txt-red">Ero</p>Guide
-      </div>
-    </div>
-
-    <!-- SEPERATOR -->
-    <div class="separator-wrapper">
-      <div class="separator"><hr /></div>
-      <div class="r18-image-wrapper">
-        <a :href=KOHARU_SRC target="_blank" rel="noopener norefferer" class="hoverer"></a>
-        <img src="../assets/images/koharu_warning.png" class="unselectable r18-image"/>
-      </div>
-      <div class="separator"><hr /></div>
-    </div>
-
-    <!-- WARNING + BUTTON -->
-    <p class="age-warning">By clicking on the button below you confirm that you are <b class="bold-warning">at least 18 years of age</b>.</p>
-    <RouterLink to="/guide" class="spicy-btn">Enter The Rabbit Hole</RouterLink>
-  </main>
+    <main class="page">
+        <div class="left-aligned text-wrapper">
+            <span class="unselectable title">
+                Welcome to the <span class="red bold" @click="toggleFun">{{ funMsg }}</span>
+            </span>
+            <span class="text">
+                Although chances are high you already know why you're here, I'll explain what this is all about once more, just in case.
+                This site is targetted to those who are interested starting with so-called <a :href=EROGE_WIKI target="_blank" rel="noopener norefferer">Eroge</a> (エロゲ, Erotic Game): Japanese games that feature explicit content, mainly graphics of sexual nature, inside them.
+                Unfortunately, many of them are hardly accessible to the average person, especially if you live outside of Japan, which is why I felt compelled to write something that helps you to navigate through this — frankly speaking — absolute mess.
+            </span>
+            <span class="text">
+                If you already know everything and feel comfortable enough getting what you need without this guide, feel free to skip this entire segment by either scrolling down and clicking on the "Recommend Me Something" button, or by clicking <router-link to="/eroge">here</router-link>. 
+                If you feel like you're still unsure, I suggest you stick around and give this bit a read.
+                It might seem long, but I'll try to entertain you as much as I can on your journey to peek degeneracy.<br>
+                So buckle up buckaroo, cuz' this is gonna be quite the wild ride.
+            </span>
+        </div>
+    </main>
 </template>
 
 <style scoped lang="scss">
-  .title {
-    text-align: center;
-
-    font-weight: 800;
-    font-family: 'Bahiana', cursive;
-    color: rgba(255, 255, 255, 1);
-
-    line-height: 1.0 !important;
-
-    .title-txt {
-      font-size: 112px;
-      font-weight: 800;
-    }
-
-    #title-txt-red {
-      color: red;
-      font-weight: 800;
-      display: inline-block;
-    }
-
-    .title-small {
-      font-size: 60px;
-    }
-  }
-
-  .separator-wrapper {
-    width: 100%;
-    padding-bottom: 1em;
-
-    display: flex;
-    flex-flow: center;
-    place-items: center;
-  }
-
-  .separator {
-    padding-top: 4em;
-    width: 100%;
-    margin-left: 1em;
-    margin-right: 1em;
-  }
-
-  hr {
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
-  }
-
-  .r18-image-wrapper {
-    padding-top: 4em;
-    position: relative;
-  }
-
-  .hoverer {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    margin-top: -4em;
-    z-index: 1000;
-    padding: 0.5em;
-    text-decoration: none;
-  }
-
-  .r18-image {
-    width: 20vh;
-    margin-top: -4em;
-    pointer-events: none;
-  }
-
-  .age-warning {
-    padding-bottom: 1em;
-    font-style: italic;
-    letter-spacing: 0.15em;
-
-    .bold-warning {
-      font-weight: 800;
-    }
-  }
-
-  .spicy-btn {
-    text-decoration: none;
-    color: red;
-    text-align: center;
-    font-weight: 700;
-    font-size: 24px;
-    line-height: 1;
-    text-transform: uppercase;
-
-    border: 3px solid red;
-    border-radius: 12px;
-
-    padding: 0.5em 1em;
-    margin: 0.25em;
-    
-    opacity: .8;
-  }
-
-  .spicy-btn:hover {
-    transition: all .35s ease;
-    color: #181818;
-    border-color: red;
-    background-color: red;
-  }
+    @import '../assets/design.scss'
 </style>
