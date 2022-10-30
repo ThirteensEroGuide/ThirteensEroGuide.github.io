@@ -1,0 +1,1 @@
+const e="evenicle",n="Evenicle",t="./headers/evenicle.jpg",s=[{name:"",src:{url:"",platform:""}}],c=[],o="Lorem Ipsum Dolor Sit Amet",l={id:e,name:n,url:t,dev:s,tags:c,"dl-url":[],description:o};export{l as default,o as description,s as dev,e as id,n as name,c as tags,t as url};

@@ -1,0 +1,1 @@
+const s="sister_life_fantasy",t="Sister! Life ~Fantasy~",e="./headers/sister.jpg",i="",n=[],a="Lorem Ipsum Dolor Sit Amet",o={id:s,name:t,url:e,dev:i,tags:n,"dl-url":[],description:a};export{o as default,a as description,i as dev,s as id,t as name,n as tags,e as url};

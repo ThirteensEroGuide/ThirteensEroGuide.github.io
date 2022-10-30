@@ -1,0 +1,1 @@
+const s="eris_dysnomia",o="Eris Dysnomia!",t="./headers/eris_dysnomia.jpg",i=[{name:"",src:{url:"",platform:""}}],r=[],e="Lorem Ipsum Dolor Sit Amet",n={id:s,name:o,url:t,dev:i,tags:r,"dl-url":["https://www.dlsite.com/maniax/work/=/product_id/RJ392643.html"],description:e};export{n as default,e as description,i as dev,s as id,o as name,r as tags,t as url};

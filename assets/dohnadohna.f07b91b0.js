@@ -1,0 +1,1 @@
+const o="dohnadohna",n="Dohna Dohna",a="./headers/dohnadohna.jpg",t=[{name:"",src:{url:"",platform:""}}],d=[],s="Lorem Ipsum Dolor Sit Amet",e={id:o,name:n,url:a,dev:t,tags:d,"dl-url":[],description:s};export{e as default,s as description,t as dev,o as id,n as name,d as tags,a as url};

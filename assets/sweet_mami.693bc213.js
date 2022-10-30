@@ -1,0 +1,1 @@
+const t="sweet_mami",e="Sweet Mami",s="./headers/sweet_mami.jpg",i="seismic",m=[],o="Lorem Ipsum Dolor Sit Amet",a={id:t,name:e,url:s,dev:i,tags:m,"dl-url":["https://www.dlsite.com/maniax/work/=/product_id/RJ112720.html","https://sukebei.nyaa.si/view/2726780"],description:o};export{a as default,o as description,i as dev,t as id,e as name,m as tags,s as url};

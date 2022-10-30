@@ -1,0 +1,1 @@
+const s="princess_and_conquest",t="Princess & Conquest",e="./headers/pnc.jpg",n="",o=[],c="Lorem Ipsum Dolor Sit Amet",r={id:s,name:t,url:e,dev:n,tags:o,"dl-url":["https://towerfag.itch.io/pnc","https://f95zone.to/threads/princess-conquest-v0-19-11-patch-1-towerfag.602/"],description:c};export{r as default,c as description,n as dev,s as id,t as name,o as tags,e as url};

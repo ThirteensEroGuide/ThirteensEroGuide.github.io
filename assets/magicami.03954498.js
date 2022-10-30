@@ -1,0 +1,1 @@
+const a="magicami",s="Magicami DX",t="./headers/magicami.jpg",e="",m=[],i="Lorem Ipsum Dolor Sit Amet",c={id:a,name:s,url:t,dev:e,tags:m,"dl-url":["https://www.johren.games/games/mgcm-dx-en/"],description:i};export{c as default,i as description,e as dev,a as id,s as name,m as tags,t as url};

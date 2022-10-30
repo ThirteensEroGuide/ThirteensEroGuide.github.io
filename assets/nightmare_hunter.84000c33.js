@@ -1,0 +1,1 @@
+const t="nightmare_hunter",e="Nightmare Hunter",r="./headers/nightmare_hunter.jpg",s="kurasuke",n=[],a="Lorem Ipsum Dolor Sit Amet",o={id:t,name:e,url:r,dev:s,tags:n,"dl-url":["https://store.steampowered.com/app/1990590/Nightmare_Hunter/","https://sukebei.nyaa.si/view/3719153"],description:a};export{o as default,a as description,s as dev,t as id,e as name,n as tags,r as url};

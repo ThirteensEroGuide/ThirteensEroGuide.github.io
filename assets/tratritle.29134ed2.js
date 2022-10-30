@@ -1,0 +1,1 @@
+const t="tratritle",e="Tratritle!",r="./headers/tratritle.jpg",s="INAZUMA SOFT",o=[],a="Lorem Ipsum Dolor Sit Amet",i={id:t,name:e,url:r,dev:s,tags:o,"dl-url":["https://store.steampowered.com/app/1731200/TRATRITLE/","https://f95zone.to/threads/tratritle-final-inazuma-soft.124085/"],description:a};export{i as default,a as description,s as dev,t as id,e as name,o as tags,r as url};

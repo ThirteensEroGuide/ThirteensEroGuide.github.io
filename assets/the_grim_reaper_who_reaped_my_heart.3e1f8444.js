@@ -1,0 +1,1 @@
+const e="the_grim_reaper_who_reaped_my_heart",r="The Grim Reaper who reaped my Heart!",t="./headers/the_grim_reaper_vel.jpg",a="Kamuo",o=["VN","Monster Girls","Animated CG"],s="Lorem Ipsum Dolor Sit Amet",i={id:e,name:r,url:t,dev:a,tags:o,"dl-url":["https://kamuo.itch.io/vel"],description:s};export{i as default,s as description,a as dev,e as id,r as name,o as tags,t as url};
