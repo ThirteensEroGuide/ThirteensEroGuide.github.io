@@ -1,0 +1,1 @@
+import{_ as t,o,c as s,a,t as n}from"./index.05dab4f4.js";const _={name:"Badge",props:{content:{type:String,default:"Badge"}}};const c={class:"unselectable badge"},d={style:{"font-weight":"700"}};function p(r,i,e,l,g,B){return o(),s("div",c,[a("p",d,n(e.content),1)])}const u=t(_,[["render",p],["__scopeId","data-v-70d23090"]]);export{u as B};
