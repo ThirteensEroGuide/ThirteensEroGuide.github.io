@@ -1,0 +1,15 @@
+{
+    "id": null,
+    "name": "Example",
+    "url": "",
+    "dev": [{
+        "name": "",
+        "src": {
+            "url": "",
+            "platform": ""
+        }
+    }],
+    "tags": [],
+    "dl-url": [],
+    "description": "Lorem Ipsum Dolor Sit Amet"
+}

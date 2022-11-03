@@ -35,5 +35,9 @@ const toggleFun = () => {
 </template>
 
 <style scoped lang="scss">
-    @import '../assets/design.scss'
+    @import '../assets/design.scss';
+
+    .page {
+        
+    }
 </style>

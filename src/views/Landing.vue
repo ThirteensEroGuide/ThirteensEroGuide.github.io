@@ -1,7 +1,20 @@
 <script setup lang="ts">
+import { onBeforeMount, onUnmounted } from 'vue';
 import { RouterLink } from 'vue-router'
 
+onBeforeMount(() => {
+  document.body.className = 'landing';
+});
+
+onUnmounted(() => {
+  document.body.classList.remove('landing');
+});
+
 const KOHARU_SRC = 'https://twitter.com/azihurai3/status/1494533093788557312'
+
+const confirmR18 = () => {
+  localStorage.setItem('r18_confirmed', 'true');
+}
 </script>
 
 <template>
@@ -26,7 +39,7 @@ const KOHARU_SRC = 'https://twitter.com/azihurai3/status/1494533093788557312'
 
     <!-- WARNING + BUTTON -->
     <p class="age-warning">By clicking on the button below you confirm that you are <b class="bold-warning">at least 18 years of age</b>.</p>
-    <RouterLink to="/home" class="spicy-btn">Enter The Rabbit Hole</RouterLink>
+    <RouterLink to="/home" class="spicy-btn" @click="confirmR18">Enter The Rabbit Hole</RouterLink>
   </main>
 </template>
 
@@ -126,10 +139,10 @@ const KOHARU_SRC = 'https://twitter.com/azihurai3/status/1494533093788557312'
     margin: 0.25em;
     
     opacity: .8;
+    transition: all .35s ease;
   }
 
   .spicy-btn:hover {
-    transition: all .35s ease;
     color: #181818;
     border-color: red;
     background-color: red;

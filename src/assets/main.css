@@ -12,14 +12,14 @@
 }
 
 @media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-  
   #app {
     min-width: 60%;
   }
+}
+
+body.landing {
+  display: flex !important;
+  place-items: center !important;
 }
 
 .page {

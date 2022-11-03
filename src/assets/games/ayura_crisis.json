@@ -1,0 +1,15 @@
+{
+    "id": "ayura_crisis",
+    "name": "Ayura Crisis!",
+    "url": "./headers/ayura_crisis.jpg",
+    "dev": [{
+        "name": "",
+        "src": {
+            "url": "",
+            "platform": ""
+        }
+    }],
+    "tags": [],
+    "dl-url": ["https://www.dlsite.com/maniax/work/=/product_id/RJ240238.html/?locale=en_US"],
+    "description": "Lorem Ipsum Dolor Sit Amet"
+}

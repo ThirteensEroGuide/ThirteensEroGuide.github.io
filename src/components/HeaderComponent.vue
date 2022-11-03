@@ -53,7 +53,7 @@ export default {
 </template>
 
 <style scoped lang="scss">
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 767.98px) {
         .reg {
             display: none !important;
         }
@@ -67,7 +67,7 @@ export default {
         }
     }
 
-    @media only screen and (min-width: 768.1px) {
+    @media only screen and (min-width: 768px) {
         .sm {
             display: none !important;
         }
@@ -139,10 +139,10 @@ export default {
             font-weight: 500;
             opacity: 0.8;
             padding: 0 0.25em;
+            transition: .3s opacity;
         }
 
         .item-text:hover {
-            transition: .3s;
             opacity: 1;
         }
     }

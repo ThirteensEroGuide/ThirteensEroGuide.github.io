@@ -1,0 +1,15 @@
+{
+    "id": "a_lose_hero_in_succ_castle",
+    "name": "A Lose Hero in the Castle of the Succubi",
+    "url": "./headers/a_lose_hero.jpg",
+    "dev": [{
+        "name": "",
+        "src": {
+            "url": "",
+            "platform": ""
+        }
+    }],
+    "tags": [],
+    "dl-url": ["https://store.steampowered.com/app/1747330/A_Lose_Hero_in_the_Castle_of_the_Succubi/", ""],
+    "description": "Lorem Ipsum Dolor Sit Amet"
+}

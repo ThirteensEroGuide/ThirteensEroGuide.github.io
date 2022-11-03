@@ -1,0 +1,9 @@
+{
+    "id": "nekopara",
+    "name": "Nekopara",
+    "url": "./headers/nekopara.jpg",
+    "dev": "NEKO WORKs / Sayori",
+    "tags": ["VN", "Monster Girls", "Animated CG"],
+    "dl-url": ["https://store.steampowered.com/bundle/676/NEKOPARA/", "https://sukebei.nyaa.si/view/3670917"],
+    "description": "Lorem Ipsum Dolor Sit Amet"
+}

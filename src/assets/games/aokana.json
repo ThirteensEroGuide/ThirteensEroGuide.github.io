@@ -1,0 +1,15 @@
+{
+    "id": "aokana",
+    "name": "Aokana - Four Rhythms Across the Blue",
+    "url": "./headers/aokana.jpg",
+    "dev": [{
+        "name": "",
+        "src": {
+            "url": "",
+            "platform": ""
+        }
+    }],
+    "tags": [],
+    "dl-url": [],
+    "description": "Lorem Ipsum Dolor Sit Amet"
+}

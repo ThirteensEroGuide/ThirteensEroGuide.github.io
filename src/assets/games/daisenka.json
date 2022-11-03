@@ -1,0 +1,15 @@
+{
+    "id": "daisenka",
+    "name": "DaiSenka",
+    "url": "./headers/daisenka.jpg",
+    "dev": [{
+        "name": "",
+        "src": {
+            "url": "",
+            "platform": ""
+        }
+    }],
+    "tags": [],
+    "dl-url": [],
+    "description": "Lorem Ipsum Dolor Sit Amet"
+}

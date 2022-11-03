@@ -1,0 +1,15 @@
+{
+    "id": "evenicle",
+    "name": "Evenicle",
+    "url": "./headers/evenicle.jpg",
+    "dev": [{
+        "name": "",
+        "src": {
+            "url": "",
+            "platform": ""
+        }
+    }],
+    "tags": [],
+    "dl-url": [],
+    "description": "Lorem Ipsum Dolor Sit Amet"
+}
