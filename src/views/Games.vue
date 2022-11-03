@@ -13,7 +13,8 @@ let filterActive = ref(false);
 let headersLoadedCount = ref(0);
 let headersLoaded = ref(false);
 
-let kaomoji = ref('');
+let happyKao = ref('');
+let sadKao = ref('');
 
 type PTag = {
     tag: Tag,
@@ -24,7 +25,8 @@ const headers = ['Genre', 'Art Style', 'Setting', 'Misc.', 'Engine'];
 let tags: Ref<Record<string, PTag[]>> = ref({});
 
 onMounted(async () => {
-    __randomKaomoji();
+    happyKao.value = __randomKaomoji(true);
+    sadKao.value = __randomKaomoji(false);
     __prepTags();
     gamesLoaded.value = await loadAllGames();
     // console.log(shownGames.value);
@@ -126,9 +128,12 @@ const __prepTags = () => {
     tags.value = payload;
 }
 
-const __randomKaomoji = () => {
-    const kaomojis = ['(╥﹏╥)', '┐(‘～` )┌', '｡ﾟ･ (>﹏<) ･ﾟ｡', '(｡•́︿•̀｡)', '(πーπ)'];
-    kaomoji.value = kaomojis[Math.floor(Math.random() * kaomojis.length)];
+const __randomKaomoji = (happy: boolean) => {
+    const kaomojis = happy
+        ? ['ヽ(・∀・)ﾉ', '＼(￣▽￣)／', '<(￣︶￣)>', '°˖✧◝(⁰▿⁰)◜✧˖°', '┬┴┬┴┤( ͡° ͜ʖ├┬┴┬┴']
+        : ['(╥﹏╥)', '┐(‘～` )┌', '｡ﾟ･ (>﹏<) ･ﾟ｡', '(｡•́︿•̀｡)', '(πーπ)'];
+
+    return kaomojis[Math.floor(Math.random() * kaomojis.length)];
 }
 </script>
 
@@ -183,13 +188,16 @@ const __randomKaomoji = () => {
             </div>
             <div class="flex-down center" v-show="!shownGames || shownGames.length === 0">
                 <span>No Games Found...</span>
-                <span>{{ kaomoji }}</span>
+                <span>{{ sadKao }}</span>
             </div>
         </div>
         <div v-show="!headersLoaded" class="heart-wrapper">
             <div class="lds-heart">
                 <div></div>
             </div>
+            <div class="half-sep-space"></div>
+            <span class="unselectable">LOADING</span>
+            <span class="unselectable">{{ happyKao }}</span>
         </div>
     </main>
 </template>
@@ -382,5 +390,15 @@ const __randomKaomoji = () => {
 
     .heart-wrapper {
         margin-top: 5em;
+        display: flex;
+        flex-direction: column;
+        place-items: center;
+
+        > span {
+            font-size: 24px;
+            font-weight: 600;
+            color: white;
+            opacity: .8;
+        }
     }
 </style>
