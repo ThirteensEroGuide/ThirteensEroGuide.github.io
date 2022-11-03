@@ -3,12 +3,17 @@ import { ref, onMounted, type Ref } from 'vue';
 import type { Game, GameWrapper, Tag } from '../types/type_definitions';
 import { genre, art, setting, misc, engine } from '../types/type_definitions';
 
-let gamesLoaded = ref(false);
 let games: Ref<Game[]> = ref([]);
 let shownGames: Ref<Game[]> = ref([]);
 
-let searchInput = ref("");
+let gamesLoaded = ref(false);
+let searchInput = ref('');
 let filterActive = ref(false);
+
+let headersLoadedCount = ref(0);
+let headersLoaded = ref(false);
+
+let kaomoji = ref('');
 
 type PTag = {
     tag: Tag,
@@ -19,7 +24,8 @@ const headers = ['Genre', 'Art Style', 'Setting', 'Misc.', 'Engine'];
 let tags: Ref<Record<string, PTag[]>> = ref({});
 
 onMounted(async () => {
-    prepTags();
+    __randomKaomoji();
+    __prepTags();
     gamesLoaded.value = await loadAllGames();
     // console.log(shownGames.value);
 });
@@ -42,11 +48,33 @@ const loadAllGames = async (): Promise<boolean> => {
     return games.value.length > 0;
 }
 
+const findTagAmount = (tag: Tag) => {
+    return games.value
+        .filter(g => g.tags.includes(tag)).length
+        .toString();
+}
+
+const changeAllTagsTo = (to: boolean) => {
+    for (let key in tags.value) {
+        const value = tags.value[key];
+        value.forEach(t => t.checked = to);
+    }
+
+    shownGames.value = __filter(games.value);
+}
+
 const updateGames = () => {
     let gamesList = games.value;
     gamesList = __filter(gamesList);
     gamesList = __search(gamesList);
     shownGames.value = gamesList;
+}
+
+const updateHeaderStatus = () => {
+    headersLoadedCount.value++;
+    if (headersLoadedCount.value === games.value.length) {
+        headersLoaded.value = true;
+    }
 }
 
 const __filter = (games: Game[]) => {
@@ -77,7 +105,7 @@ const __search = (games: Game[]) => {
     return games.filter(g => g.name.toLowerCase().includes(input.toLowerCase()));
 }
 
-const prepTags = () => {
+const __prepTags = () => {
     const convert = (array: Tag[]) => {
         return array.map(v => {
             return {
@@ -98,19 +126,9 @@ const prepTags = () => {
     tags.value = payload;
 }
 
-const findTagAmount = (tag: Tag) => {
-    return games.value
-        .filter(g => g.tags.includes(tag)).length
-        .toString();
-}
-
-const changeAllTagsTo = (to: boolean) => {
-    for (let key in tags.value) {
-        const value = tags.value[key];
-        value.forEach(t => t.checked = to);
-    }
-
-    shownGames.value = __filter(games.value);
+const __randomKaomoji = () => {
+    const kaomojis = ['(╥﹏╥)', '┐(‘～` )┌', '｡ﾟ･ (>﹏<) ･ﾟ｡', '(｡•́︿•̀｡)', '(πーπ)'];
+    kaomoji.value = kaomojis[Math.floor(Math.random() * kaomojis.length)];
 }
 </script>
 
@@ -138,7 +156,7 @@ const changeAllTagsTo = (to: boolean) => {
                     <button class="btn" @click="changeAllTagsTo(false)">Deselect All</button>
                 </div>
 
-                <div class="filter-settings">
+                <div class="flex-down">
                     <div v-for="header in headers" :key="header">
                         <span class="bold unselectable f-cat-title">{{ header }}</span>
                         <div class="cat-wrapper">
@@ -153,25 +171,40 @@ const changeAllTagsTo = (to: boolean) => {
             <div class="sep-space"></div>
         </div>
 
-        <div v-if="gamesLoaded" class="game-grid">
-            <div v-for="game of shownGames" :key="game.id">
-                <router-link :to="{ name: 'gameDetail', params: { name: game.id }}">
-                    <div class="game-wrapper" role="link">
-                        <img class="header" :src=game.url />
-                    </div>
-                </router-link>
+        <div v-show="headersLoaded" class="game-grid-wrapper">
+            <div v-if="gamesLoaded" class="game-grid">
+                <div v-for="game of shownGames" :key="game.id">
+                    <router-link :to="{ name: 'gameDetail', params: { name: game.id }}">
+                        <div class="game-wrapper" role="link">
+                            <img class="header" :src=game.url @load="updateHeaderStatus" @error="updateHeaderStatus" />
+                        </div>
+                    </router-link>
+                </div>
+            </div>
+            <div class="flex-down center" v-show="!shownGames || shownGames.length === 0">
+                <span>No Games Found...</span>
+                <span>{{ kaomoji }}</span>
             </div>
         </div>
-
+        <div v-show="!headersLoaded" class="heart-wrapper">
+            <div class="lds-heart">
+                <div></div>
+            </div>
+        </div>
     </main>
 </template>
 
 <style scoped lang="scss">
     @import '../assets/design.scss';
+    @import '../assets/heartLoader.scss';
 
-    .page {
+    .page .flex-down {
         display: flex;
         flex-direction: column;
+    }
+
+    .center {
+        place-items: center;
     }
 
     .info-bar {
@@ -199,6 +232,10 @@ const changeAllTagsTo = (to: boolean) => {
     .inner-search-wrapper {
         display: flex;
         place-items: center;
+    }
+
+    .game-grid-wrapper {
+        width: 100%;
     }
 
     .game-grid {
@@ -291,11 +328,6 @@ const changeAllTagsTo = (to: boolean) => {
         justify-content: flex-end;
     }
 
-    .filter-settings {
-        display: flex;
-        flex-direction: column;
-    }
-
     .f-cat-title {
         text-transform: uppercase;
         color: white;
@@ -346,5 +378,9 @@ const changeAllTagsTo = (to: boolean) => {
         color: #181818;
         border-color: red;
         background-color: red;
+    }
+
+    .heart-wrapper {
+        margin-top: 5em;
     }
 </style>
