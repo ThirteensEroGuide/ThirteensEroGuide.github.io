@@ -14,7 +14,7 @@ onBeforeMount(() => {
 
 const parseGameData = () => {
     const route = useRoute();
-    game.value = JSON.parse(atob(route.params.gameData as string));
+    game.value = JSON.parse(route.params.gameData as string);
 }
 
 const sortTags = () => {
@@ -237,7 +237,7 @@ const useImage = (url: string) => {
         font-size: 12px;
     }
  
-    .tooltip:hover span {
+    .badges:hover + span {
         opacity: 1;
     }
 

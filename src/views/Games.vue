@@ -16,6 +16,8 @@ let headersLoaded = ref(false);
 let happyKao = ref('');
 let sadKao = ref('');
 
+let infoActive = ref(false);
+
 type PTag = {
     tag: Tag,
     checked: boolean
@@ -138,13 +140,50 @@ const __randomKaomoji = (happy: boolean) => {
 </script>
 
 <template>
+    <div v-show="infoActive" class="blur" @click="infoActive = false"></div>
     <main class="page">
+        <div v-show="infoActive" class="about-embed">
+            <div class="about-bar">
+                <span class="subtitle">ABOUT</span>
+                <img src="../assets/icons/close.svg" @click="infoActive = false" />
+            </div>
+            <span class="about-text">
+                In order to make the entry into the ero-world a tiny bit more of a pleasant experience, this page contains some of the games I have already played.
+                As taste (for better of for worse) can vary, I decided to not only include those I liked, but also those I deemed as not complete trash after giving them a try.
+            </span>
+            <img class="unselectable search-img" src="../assets/images/search_filter.png" />
+            <span class="about-text">
+                You can use the <span class="bold">search</span> and/or <span class="bold">filter</span> function located at the very top to look for games you may like, or just find a random one that catches your eye and give it a go by clicking on the image.
+                The game pages themselves provide essentially everything you need, including links to places you can download the game at, tags, meta information and a short comment about the game by me.
+                <br><br>
+                You will also come across three different icons located at the top right corner of the game image and its corresponding game page.
+                <br>
+                <u>Here is what they mean:</u>
+            </span>
+            <div class="explainer">
+                <img src="../assets/icons/beginner.png" />
+                <span><span class="bold white">Beginner-Friendly</span> — This game serves as a nice starting point for players who are new to this genre</span>
+            </div>
+            <div class="explainer">
+                <img src="../assets/icons/extreme.png" />
+                <span><span class="bold white">Extreme Content</span> — This game contains and focuses around extreme content (e.g., rape, drugs, etc.)</span>
+            </div>
+            <div class="explainer">
+                <img src="../assets/icons/approved.png" />
+                <span><span class="bold white">Thirteen Approved</span> — This game is one of my personal favorites</span>
+            </div>
+            <div class="half-sep-space" />
+            <span class="about-text">
+                In case you disagree with me on the choice of games featured in this list, feel free to keep it to yourself. I'll update the list whenever I find a game that I feel like it should be in it or change my opinion regarding an already existing one.
+            </span>
+        </div>
+
         <div class="info-bar">
-            <div>
-                <img class="info-icon" src="../assets/icons/help.svg" />
+            <div class="flex-wrap">
+                <img class="info-icon" src="../assets/icons/help.svg" @click="infoActive = true" />
             </div>
             
-            <div class="search-wrapper">
+            <div class="flex-wrap">
                 <div id="filter">
                     <img class="filter-icon" src="../assets/icons/filter.svg" @click="filterActive = !filterActive;" />
                 </div>
@@ -165,7 +204,7 @@ const __randomKaomoji = (happy: boolean) => {
                     <div v-for="header in headers" :key="header">
                         <span class="bold unselectable f-cat-title">{{ header }}</span>
                         <div class="cat-wrapper">
-                            <div v-for="value in tags[header]" :key="value.tag">
+                            <div class="nonshrink flex-wrap" v-for="value in tags[header]" :key="value.tag">
                                 <input type="checkbox" :id=value.tag :name=value.tag v-model="value.checked" @click="value.checked = !value.checked" @change="updateGames" />
                                 <label for=value.tag><span class="white">{{ value.tag }}</span><span class="op-50p"> ({{ findTagAmount(value.tag) }})</span></label>
                             </div>
@@ -182,6 +221,24 @@ const __randomKaomoji = (happy: boolean) => {
                     <router-link :to="{ name: 'gameDetail', params: { name: game.id }}">
                         <div class="game-wrapper" role="link">
                             <img class="header" :src=game.url @load="updateHeaderStatus" @error="updateHeaderStatus" />
+                            <div class="header-overlay">
+                                <div>
+                                    <div class="flex-wrap tooltip-bar">
+                                        <div class="unselectable tooltip" data-tooltip="Beginner-Friendly">
+                                            <img src="../assets/icons/beginner.png" class="badges" v-if="game.stags?.includes('Beginner')" />
+                                        </div>
+                                        <div class="unselectable tooltip" data-tooltip="Extreme Content">
+                                            <img src="../assets/icons/extreme.png" class="badges" v-if="game.stags?.includes('Extreme')" />
+                                        </div>
+                                        <div class="unselectable tooltip" data-tooltip="Thirteen Approved">
+                                            <img src="../assets/icons/approved.png" class="badges" v-if="game.stags?.includes('Approved')" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="name">
+                                    <span>{{ game.name }}</span>
+                                </div>
+                            </div>
                         </div>
                     </router-link>
                 </div>
@@ -211,6 +268,84 @@ const __randomKaomoji = (happy: boolean) => {
         flex-direction: column;
     }
 
+    .blur {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: -130px;
+        height: calc(100% + 136px);
+        width: 100%;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        z-index: 100;
+    }
+
+    .about-embed {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        border-radius: 10px;
+        min-height: 500px;
+        max-width: 800px;
+        background-color: #181818;
+        border-radius: 10px;
+        z-index: 999;
+        box-shadow: 0 0 10px #131313;
+        padding: 1em 2em 2em;
+
+        .about-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5em;
+
+            img {
+                height: 50px;
+                cursor: pointer;
+                opacity: .8;
+                transition: .2s opacity;
+            }
+
+            img:hover {
+                opacity: 1;
+            }
+        }
+
+        .about-text {
+            hyphens: auto;
+            text-align: justify;
+        }
+
+        .search-img {
+            pointer-events: none;
+            border-radius: 15px;
+            width: 250px;
+            height: auto;
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+        }
+
+        .explainer {
+            display: flex;
+            align-items: center;
+            margin-top: .5em;
+
+            img {
+                width: 32px;
+                margin-right: .5em;
+            }
+        }
+    }
+
+    @keyframes fly-in {
+        from {
+            top: -500px;
+        }
+        to {
+            top: 0px;
+        }
+    }
+
     .center {
         place-items: center;
     }
@@ -222,8 +357,6 @@ const __randomKaomoji = (happy: boolean) => {
         justify-content: space-between;
         align-items: center;
 
-        width: 300px;
-
         @media screen and (min-width: 679px) {
             width: calc(2 * 300px + 1em);
         }
@@ -233,7 +366,11 @@ const __randomKaomoji = (happy: boolean) => {
         }
     }
 
-    .search-wrapper {
+    .nonshrink {
+        flex-shrink: 0;
+    }
+
+    .flex-wrap {
         display: flex;
     }
 
@@ -260,11 +397,16 @@ const __randomKaomoji = (happy: boolean) => {
         border-radius: 10px;
         box-shadow: 0 7px #131313;
         cursor: pointer;
+        position: relative;
+        transition: .2s;
     }
 
     .game-wrapper:hover {
-        transition: .3s;
         scale: 1.05;
+    }
+
+    .game-wrapper:hover .name {
+        opacity: 1;
     }
 
     .header {
@@ -273,12 +415,24 @@ const __randomKaomoji = (happy: boolean) => {
         border-radius: 10px;
     }
 
+    .header-overlay {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+    }
+
     .info-icon, .filter-icon {
         width: 50px;
         height: 50px;
         opacity: 0.8;
         cursor: pointer;
         transition: .35s opacity;
+        place-self: center;
     }
 
     .info-icon:hover, .filter-icon:hover {
@@ -327,7 +481,15 @@ const __randomKaomoji = (happy: boolean) => {
     }
 
     .collapse.open {
-        max-height: 320px;
+        max-height: 460px;
+
+        @media screen and (min-width: 679px) {
+            max-height: 365px;
+        }
+
+        @media screen and (min-width: 994px) {
+            max-height: 320px;
+        }
     }
 
     .filter-top {
@@ -344,6 +506,7 @@ const __randomKaomoji = (happy: boolean) => {
 
     .cat-wrapper {
         display: flex;
+        flex-flow: row wrap;
         margin-bottom: 0.35em;
 
         div > label {
@@ -399,6 +562,85 @@ const __randomKaomoji = (happy: boolean) => {
             font-weight: 600;
             color: white;
             opacity: .8;
+        }
+    }
+
+    .badges {
+        height: 1.8em;
+        margin: 0 0.2em;
+        filter: drop-shadow(0px 0px 2px #131313);
+
+        cursor: pointer;
+    }
+
+    .tooltip-bar {
+        padding: 5px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    [data-tooltip] {
+        position: relative;
+        z-index: 99;
+        cursor: pointer;
+    }
+
+    [data-tooltip]:before,
+    [data-tooltip]:after {
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    [data-tooltip]:hover:before,
+    [data-tooltip]:hover:after {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    [data-tooltip]:before {
+        position: absolute;
+        bottom: 110%;
+        left: -70%;
+        width: max-content;
+        border-radius: 10px;
+        background: #0a0a0a;
+        content: attr(data-tooltip);
+        color: white;
+        font-size: 10px;
+        padding: 5px;
+        white-space: nowrap;
+
+        transition: .2s opacity;
+    }
+
+    [data-tooltip]:after {
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -5px;
+        width: 0;
+        border-top: 5px solid #0a0a0a;
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+        content: " ";
+        font-size: 0;
+        line-height: 0;
+    }
+
+    .name {
+        opacity: 0;
+        background-color: white;
+        background-color: #fff;
+        background-color: rgba(255, 255, 255, .5);
+        border-radius: 0 0 10px 10px;
+        padding: 1px 0.5em;
+        transition: .3s opacity;
+
+        > span {
+            color: black;
+            font-weight: 800;
+            opacity: .9;
         }
     }
 </style>

@@ -2,12 +2,12 @@ import type { Game } from '../types/type_definitions';
 import { createRouter, createWebHashHistory, type NavigationGuardNext } from 'vue-router'
 import Landing from '../views/Landing.vue';
 
-const verifyR18 = (to, from, next: NavigationGuardNext) => {
-  if (!localStorage.getItem('r18_confirmed') || localStorage.getItem('r18_confirmed') !== 'true') {
-    next('/');
-  }
-
-  next();
+/**
+ * Checks if the localStorage contains a set 'r18_confirmed' flag, and if yes, whether it is set to 'true'
+ * @returns true if the user has verified their age by clicking on the landing page button, false otherwise
+ */
+const verifyR18 = (to, from): boolean => {
+  return !(!localStorage.getItem('r18_confirmed') || localStorage.getItem('r18_confirmed') !== 'true');
 }
 
 const router = createRouter({
@@ -46,11 +46,14 @@ const router = createRouter({
       component: () => import('../views/GameDetail.vue'),
       props: true,
       beforeEnter: async (to, from, next) => {
-        verifyR18(to, from, next);
-
+        if (!verifyR18(to, from)) {
+          next('/');
+          return;
+        }
+        
         try {
           const gameData: Game = await import(`../assets/games/${to.params.name}.json`);
-          to.params.gameData = btoa(JSON.stringify(gameData));
+          to.params.gameData = JSON.stringify(gameData);
           next();
         } catch(error) {
           next('/404');
