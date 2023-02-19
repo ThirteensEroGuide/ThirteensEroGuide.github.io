@@ -1,1 +1,0 @@
-const s="ayura_crisis",r="Ayura Crisis!",t="./headers/ayura_crisis.jpg",a=[{name:"",src:{url:"",platform:""}}],i=[],o="Lorem Ipsum Dolor Sit Amet",c={id:s,name:r,url:t,dev:a,tags:i,"dl-url":["https://www.dlsite.com/maniax/work/=/product_id/RJ240238.html/?locale=en_US"],description:o};export{c as default,o as description,a as dev,s as id,r as name,i as tags,t as url};

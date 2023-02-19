@@ -1,1 +1,0 @@
-const a="aokana",o="Aokana - Four Rhythms Across the Blue",s="./headers/aokana.jpg",t=[{name:"",src:{url:"",platform:""}}],n=[],e="Lorem Ipsum Dolor Sit Amet",r={id:a,name:o,url:s,dev:t,tags:n,"dl-url":[],description:e};export{r as default,e as description,t as dev,a as id,o as name,n as tags,s as url};

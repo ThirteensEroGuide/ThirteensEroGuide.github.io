@@ -1,1 +1,0 @@
-const n="mahjong_connect",o="Mahjong Connect!",t="./headers/mahjong_connect.jpg",c="SPLUSHWAVE",e=[],s="Lorem Ipsum Dolor Sit Amet",a={id:n,name:o,url:t,dev:c,tags:e,"dl-url":["https://www.ryuugames.com/mahjong-connect-crack/"],description:s};export{a as default,s as description,c as dev,n as id,o as name,e as tags,t as url};

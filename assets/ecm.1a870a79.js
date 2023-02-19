@@ -1,1 +1,0 @@
-const t="ecm",e="E.C.M.",o="./headers/e_c_m.jpg",s=[{name:"zankuro",src:{url:"https://twitter.com/kxii",platform:"twitter"}}],r=[],c="Lorem Ipsum Dolor Sit Amet",n={id:t,name:e,url:o,dev:s,tags:r,"dl-url":[],description:c};export{n as default,c as description,s as dev,t as id,e as name,r as tags,o as url};
