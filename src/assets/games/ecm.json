@@ -2,14 +2,38 @@
     "id": "ecm",
     "name": "E.C.M.",
     "url": "./headers/e_c_m.jpg",
-    "dev": [{
+    "tags": ["Animated CG", "Male Protagonist", "Monster Girls", "Loli", "Shota", "Thicc", "Maids"],
+    "stags": [],
+    "images": [
+        "./game_images/ecm/1.jpg",
+        "./game_images/ecm/2.gif",
+        "./game_images/ecm/3.gif"
+    ],
+    "date": "2011-01-04 (E.C.M.5: 2017-08-11)",
+    "lang": {
+        "status": "Japanese",
+        "patch": false
+    },
+    "censored": {
+        "status": true,
+        "patch": false
+    },
+    "status": "Paused",
+    "dev": [
+        {
         "name": "zankuro",
-        "src": {
-            "url": "https://twitter.com/kxii",
-            "platform": "twitter"
+        "url": "https://twitter.com/kxii"
         }
-    }],
-    "tags": [],
-    "dl-url": [],
-    "description": "Lorem Ipsum Dolor Sit Amet"
+    ],
+    "dl": [
+        {
+            "name": "Official Download",
+            "url": "https://www.dlsite.com/maniax/work/=/product_id/RJ070638.html"
+        },
+        {
+            "name": "nyaa.si",
+            "url": "https://sukebei.nyaa.si/view/3309054"
+        }
+    ],
+    "description": "Yes, this is where the gif you saw a couple years ago is from.<br><br>Now, if you already know this series you might be wondering what E.C.M. is doing in this list, and you aren't really wrong. Zankuro's E.C.M. games are not really games, but rather animated galleries that allow you to change the speed and state of the animation you're watching. Thought I'd still include it though.<br>Be warned that E.C.M.2 and E.C.M.5. are very loli heavy."
 }

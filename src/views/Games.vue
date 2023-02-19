@@ -148,7 +148,7 @@ const __randomKaomoji = (happy: boolean) => {
                 <img src="../assets/icons/close.svg" @click="infoActive = false" />
             </div>
             <span class="about-text">
-                In order to make the entry into the ero-world a tiny bit more of a pleasant experience, this page contains some of the games I have already played.
+                In order to make your entry into the ero-world a tiny bit more of a pleasant experience, this page contains some of the games I have already played.
                 As taste (for better of for worse) can vary, I decided to not only include those I liked, but also those I deemed as not complete trash after giving them a try.
             </span>
             <img class="unselectable search-img" src="../assets/images/search_filter.png" />
@@ -257,7 +257,7 @@ const __randomKaomoji = (happy: boolean) => {
             <span class="unselectable">{{ happyKao }}</span>
         </div>
     </main>
-</template>
+</template> 
 
 <style scoped lang="scss">
     @import '../assets/design.scss';
@@ -334,15 +334,6 @@ const __randomKaomoji = (happy: boolean) => {
                 width: 32px;
                 margin-right: .5em;
             }
-        }
-    }
-
-    @keyframes fly-in {
-        from {
-            top: -500px;
-        }
-        to {
-            top: 0px;
         }
     }
 

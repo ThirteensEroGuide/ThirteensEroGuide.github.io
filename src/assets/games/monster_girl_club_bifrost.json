@@ -2,8 +2,38 @@
     "id": "monster_girl_club_bifrost",
     "name": "Monster Girl Club Bifrost",
     "url": "./headers/monster_girl_club.jpg",
-    "dev": "",
-    "tags": [],
-    "dl-url": ["https://store.steampowered.com/app/1150720/Monster_Girl_Club_Bifrost/", "https://f95zone.to/threads/monster-girl-club-bifrost-v1-15c-midnight-pleasure-remtairy.48518/"],
+    "tags": ["Time Limit", "Management", "Static CG", "Fantasy", "Male Protagonist", "Monster Girls", "Loli", "Thicc", "Romance", "Prostitution"],
+    "stags": ["Approved"],
+    "images": [],
+    "date": "2020-03-30",
+    "lang": {
+        "status": "English",
+        "patch": false
+    },
+    "censored": {
+        "status": true,
+        "patch": true
+    },
+    "status": "Completed",
+    "dev": [
+        {
+            "name": "midnight pleasure",
+            "url": "https://www.dlsite.com/maniax/circle/profile/=/maker_id/RG14117.html"
+        },
+        {
+            "name": "Remtairy",
+            "url": "https://remtairy.com/"
+        }
+    ],
+    "dl": [
+        {
+            "name": "Official Download",
+            "url": "https://store.steampowered.com/app/1150720/Monster_Girl_Club_Bifrost/"
+        },
+        {
+            "name": "F95 Thread (Pre-Patched)",
+            "url": "https://f95zone.to/threads/monster-girl-club-bifrost-v1-15c-midnight-pleasure-remtairy.48518/"
+        }
+    ],
     "description": "Lorem Ipsum Dolor Sit Amet"
 }

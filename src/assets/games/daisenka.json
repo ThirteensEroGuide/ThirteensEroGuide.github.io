@@ -2,14 +2,39 @@
     "id": "daisenka",
     "name": "DaiSenka",
     "url": "./headers/daisenka.jpg",
-    "dev": [{
-        "name": "",
-        "src": {
-            "url": "",
-            "platform": ""
+    "tags": ["Pixel Art", "Fantasy", "Female Protagonist", "Thicc", "Rape", "Unity"],
+    "stags": ["Extreme"],
+    "images": [
+        "./game_images/daisenka/1.png",
+        "./game_images/daisenka/2.jpg",
+        "./game_images/daisenka/3.jpg",
+        "./game_images/daisenka/4.jpg"
+    ],
+    "date": "2022-09-22",
+    "lang": {
+        "status": "Japanese",
+        "patch": false
+    },
+    "censored": {
+        "status": true,
+        "patch": true
+    },
+    "status": "Completed",
+    "dev": [
+        {
+        "name": "TORAKUTORI",
+        "url": "https://ci-en.dlsite.com/creator/8060"
         }
-    }],
-    "tags": [],
-    "dl-url": [],
-    "description": "Lorem Ipsum Dolor Sit Amet"
+    ],
+    "dl": [
+        {
+            "name": "Official Download",
+            "url": "https://www.dlsite.com/maniax/work/=/product_id/RJ407819.html"
+        },
+        {
+            "name": "F95 Thread (Pre-Patched)",
+            "url": "https://f95zone.to/threads/daisenka-v1-0-9-torakutori.130865/"
+        }
+    ],
+    "description": "After Vampire Survivors, Magical Survival and HoloCure here comes the next (pretty lewd) entry in that genre - DaiSenka. Though, don't get me wrong, it's actually pretty enjoyable. You play as one of 5 unlockable female characters and fight yourself through hordes of knights and monsters. The number of H-scenes is on the lower side with about 5 rape scenes in case of defeat (one for each character) and 5 \"regular\" ones, so about 10 in total. So in case you want some fun for 2-3h (or more if you do end up enjoying it), give it a go."
 }

@@ -2,8 +2,36 @@
     "id": "magicami",
     "name": "Magicami DX",
     "url": "./headers/magicami.jpg",
-    "dev": "",
-    "tags": [],
-    "dl-url": ["https://www.johren.games/games/mgcm-dx-en/"],
-    "description": "Lorem Ipsum Dolor Sit Amet"
+    "tags": ["RPG", "VN", "Gacha", "Static CG", "Animated CG", "Fantasy", "Urban", "School", "Male Protagonist", "Corruption", "Unity"],
+    "stags": [],
+    "images": [
+        
+    ],
+    "date": "2019-06-26",
+    "lang": {
+        "status": "English",
+        "patch": false
+    },
+    "censored": {
+        "status": true,
+        "patch": false
+    },
+    "status": "In Development",
+    "dev": [
+        {
+        "name": "EXNOA",
+        "url": "https://dmmgames.co.jp/"
+        }
+    ],
+    "dl": [
+        {
+            "name": "Official Download (Johren)",
+            "url": "https://www.johren.games/games/mgcm-dx-en/"
+        },
+        {
+            "name": "Official Download (Nutaku)",
+            "url": "https://www.nutaku.net/games/mgcm-dx/"
+        }
+    ],
+    "description": "<span style=\"font-weight: 800\">Important</span>: Choose <span style=\"font-weight: 700; font-style: italic;\">either</span> the Johren version or the Nutaku one and stick with it. You cannot switch between the two.<br><br>Basically Madoka Magica as (actual) gacha-game with R18 scenes. You gather a team of highschool students that can turn into magical girls by kissing their phone. The battles themselves are pretty typical RPG stuff in a 3D environment paired with catchy music. Give it a shot if you like magical girls."
 }

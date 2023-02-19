@@ -152,7 +152,7 @@ const useImage = (url: string) => {
         display: flex;
         flex-direction: column;
         width: 100%;
-        margin-top: 2em;
+        margin: 2em 0;
         place-items: center;
     }
 

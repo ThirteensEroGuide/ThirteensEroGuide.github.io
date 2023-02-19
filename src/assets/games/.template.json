@@ -2,14 +2,30 @@
     "id": null,
     "name": "Example",
     "url": "",
-    "dev": [{
-        "name": "",
-        "src": {
-            "url": "",
-            "platform": ""
-        }
-    }],
     "tags": [],
-    "dl-url": [],
+    "stags": [],
+    "images": [],
+    "date": "",
+    "lang": {
+        "status": "",
+        "patch": false
+    },
+    "censored": {
+        "status": false,
+        "patch": false
+    },
+    "status": "",
+    "dev": [
+        {
+        "name": "",
+        "url": ""
+        }
+    ],
+    "dl": [
+        {
+            "name": "",
+            "url": ""
+        }
+    ],
     "description": "Lorem Ipsum Dolor Sit Amet"
 }

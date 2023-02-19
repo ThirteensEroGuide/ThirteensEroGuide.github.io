@@ -2,14 +2,36 @@
     "id": "eris_dysnomia",
     "name": "Eris Dysnomia!",
     "url": "./headers/eris_dysnomia.jpg",
-    "dev": [{
-        "name": "",
-        "src": {
-            "url": "",
-            "platform": ""
+    "tags": ["Pixel Art", "Static CG", "Side-Scroller", "Fantasy", "Female Protagonist", "Rape", "Corruption", "WolfRPG"],
+    "stags": ["Extreme"],
+    "images": [
+
+    ],
+    "date": "2022-06-25",
+    "lang": {
+        "status": "English",
+        "patch": false
+    },
+    "censored": {
+        "status": true,
+        "patch": true
+    },
+    "status": "Completed",
+    "dev": [
+        {
+            "name": "Above a Damage Tile",
+            "url": "https://www.dlsite.com/maniax/circle/profile/=/maker_id/RG42366.html/?locale=en_US"
         }
-    }],
-    "tags": [],
-    "dl-url": ["https://www.dlsite.com/maniax/work/=/product_id/RJ392643.html"],
-    "description": "Lorem Ipsum Dolor Sit Amet"
+    ],
+    "dl": [
+        {
+            "name": "Official Download",
+            "url": "https://www.dlsite.com/maniax/work/=/product_id/RJ392643.html"
+        },
+        {
+            "name": "F95 Thread",
+            "url": "https://f95zone.to/threads/erisdysnomia-final-above-a-damage-tile.121557/"
+        }
+    ],
+    "description": "Eris Dysnomia is, similar to its predecessor 'Ayura Crisis', a side-scroller that features sexual interactions with enemies. As you progress through the five or so stages, the more you submit yourself to your enemies, the kinkier the main character of this game - Eris - will become. Compared to 'Ayura Crisis', the battles feel a lot smoother as in this game the main character has two different combat modes, a scythe and a gun mode, allowing you to freely switch between the two. The art received an overall upgrade as well."
 }

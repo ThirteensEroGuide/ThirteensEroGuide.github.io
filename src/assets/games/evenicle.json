@@ -2,14 +2,36 @@
     "id": "evenicle",
     "name": "Evenicle",
     "url": "./headers/evenicle.jpg",
-    "dev": [{
-        "name": "",
-        "src": {
-            "url": "",
-            "platform": ""
+    "tags": ["RPG", "VN", "Static CG", "Fantasy", "Male Protagonist", "Loli", "Thicc", "Romance", "Rape"],
+    "stags": ["Extreme"],
+    "images": [
+        
+    ],
+    "date": "2015-04-24",
+    "lang": {
+        "status": "English",
+        "patch": false
+    },
+    "censored": {
+        "status": false,
+        "patch": false
+    },
+    "status": "Completed",
+    "dev": [
+        {
+        "name": "Alicesoft",
+        "url": "www.alicesoft.com/evenicle/"
         }
-    }],
-    "tags": [],
-    "dl-url": [],
-    "description": "Lorem Ipsum Dolor Sit Amet"
+    ],
+    "dl": [
+        {
+            "name": "Official Download",
+            "url": "https://store.steampowered.com/app/955560/"
+        },
+        {
+            "name": "F95 Thread",
+            "url": "https://f95zone.to/threads/evenicle-v1-04-alicesoft.14403/"
+        }
+    ],
+    "description": "Probably one of the better known titles in this list, Evenicle is a pretty fun RPG following a group of closet perverts on their adventure to save the world from a looming war. Unfortunately, you can only have a single wife in this world - unless you become a knight - in which case you are exempted from that divine rule that would otherwise mark you as an outlaw that is abandoned by society. Well, guess what your first objective is.<br><br>Unfortunately, in case you are a vanilla fag, you will have to accept the fact that Alicesoft games come with inevitable rape scenes. On the bright side of things they are luckily few and far between, and I would really suggest you to still play the game and just suffer through them, as the game is genuinely fun otherwise. In case you want to see how many \"unchristian\" scenes there are in total, check the comments in the F95 thread."
 }

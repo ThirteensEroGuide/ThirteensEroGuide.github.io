@@ -1,7 +1,7 @@
-export const genre = ['RPG', 'VN', 'Adventure', 'Time Management', 'Battle-Fuck', 'Simulation'] as const;
-export const art = ['Pixel Art', 'Static CG', 'Animated CG'] as const;
-export const setting = ['Fantasy', 'Slice of Life'] as const;
-export const misc = ['Male Protagonist', 'Female Protagonist', 'Monster Girls', 'Loli', 'Shota', 'Incest', 'Thicc'] as const;
+export const genre = ['RPG', 'VN', 'Adventure', 'Time Limit', 'Management', 'Battle-Fuck', 'Simulation', 'Side-Scroller', 'Gacha'] as const;
+export const art = ['Pixel Art', 'Static CG', 'Animated CG', '3D CG'] as const;
+export const setting = ['Fantasy', 'Urban', 'Slice of Life', 'School'] as const;
+export const misc = ['Male Protagonist', 'Female Protagonist', 'Monster Girls', 'Loli', 'Shota', 'Incest', 'Thicc', 'Maids', 'Romance', 'Rape', 'Corruption', 'Prostitution', 'Futanari'] as const;
 export const engine = ['Unity', 'RPGM', 'WolfRPG'] as const;
 export type Tag = (typeof genre | typeof art | typeof setting | typeof misc | typeof engine)[number];
 

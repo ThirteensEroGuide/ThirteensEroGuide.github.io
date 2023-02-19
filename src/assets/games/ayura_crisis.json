@@ -2,14 +2,39 @@
     "id": "ayura_crisis",
     "name": "Ayura Crisis!",
     "url": "./headers/ayura_crisis.jpg",
-    "dev": [{
-        "name": "",
-        "src": {
-            "url": "",
-            "platform": ""
+    "tags": ["Female Protagonist", "Pixel Art", "Side-Scroller", "Rape", "Corruption", "Fantasy", "WolfRPG"],
+    "stags": ["Extreme"],
+    "images": [
+        "./game_images/ayura_crisis/1.jpg",
+        "./game_images/ayura_crisis/2.jpg",
+        "./game_images/ayura_crisis/3.jpg",
+        "./game_images/ayura_crisis/4.jpg"
+    ],
+    "date": "2018-12-07",
+    "lang": {
+        "status": "English",
+        "patch": false
+    },
+    "censored": {
+        "status": true,
+        "patch": false
+    },
+    "status": "Completed",
+    "dev": [
+        {
+        "name": "Above a Damage Tile",
+        "url": "https://www.dlsite.com/maniax/circle/profile/=/maker_id/RG42366.html/?locale=en_US"
         }
-    }],
-    "tags": [],
-    "dl-url": ["https://www.dlsite.com/maniax/work/=/product_id/RJ240238.html/?locale=en_US"],
-    "description": "Lorem Ipsum Dolor Sit Amet"
+    ],
+    "dl": [
+        {
+            "name": "Official Download",
+            "url": "https://www.dlsite.com/maniax/work/=/product_id/RJ240238.html/?locale=en_US"
+        },
+        {
+            "name": "F95 Thread",
+            "url": "https://f95zone.to/threads/ayura-crisis-v1-18-above-a-damage-tile.22288/"
+        }
+    ],
+    "description": "A side-scroller beat 'em up with a sex mechanic. You play as a girl called Ayura and beat stages with a boss at the end. The gameplay can be quite challenging and gets gradually harder the more corrupted Ayura becomes from getting attacked by enemies. The more corrupted she is, the weaker she becomes to sex, leading to somewhat interesting side effects, new animations, passive skills and so on. The game is actually pretty fun, but if you solely want to focus on gameplay and not the scenes, you're probably better off playing its sequel \"Eris Dysnomia\"."
 }

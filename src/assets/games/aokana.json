@@ -2,14 +2,45 @@
     "id": "aokana",
     "name": "Aokana - Four Rhythms Across the Blue",
     "url": "./headers/aokana.jpg",
-    "dev": [{
-        "name": "",
-        "src": {
-            "url": "",
-            "platform": ""
+    "tags": ["VN", "Static CG", "Male Protagonist", "School", "Romance", "Urban"],
+    "stags": ["Approved", "Beginner"],
+    "images": [
+        "./game_images/aokana/1.jpg",
+        "./game_images/aokana/2.png",
+        "./game_images/aokana/3.jpg",
+        "./game_images/aokana/4.jpg",
+        "./game_images/aokana/5.png",
+        "./game_images/aokana/6.jpg"
+    ],
+    "date": "2019-09-27",
+    "lang": {
+        "status": "English",
+        "patch": false
+    },
+    "censored": {
+        "status": true,
+        "patch": false
+    },
+    "status": "Completed",
+    "dev": [
+        {
+            "name": "sprite",
+            "url": "https://aokana.net/"
+        },
+        {
+            "name": "NekoNyan",
+            "url": "https://store.steampowered.com/publisher/NekoNyanLtd"
         }
-    }],
-    "tags": [],
-    "dl-url": [],
-    "description": "Lorem Ipsum Dolor Sit Amet"
+    ],
+    "dl": [
+        {
+            "name": "Official Download",
+            "url": "https://store.steampowered.com/app/1044620/Aokana__Four_Rhythms_Across_the_Blue/"
+        },
+        {
+            "name": "F95 Thread",
+            "url": "https://f95zone.to/threads/aokana-four-rhythms-across-the-blue-v1-21-perfect-edition-sprite.37587/"
+        }
+    ],
+    "description": "This game has a surprisingly decent anime: https://anilist.co/anime/21319/Ao-no-Kanata-no-Four-Rhythm<br><br>Believe me when I say that you'll want flying shoes after playing this game. Also Misaki best girl.<br>AoKana is probably the most vanilla you can get in this list. Set on some random-ass island in Japan, you become the trainer of a few school girls participating in a sport called \"Flying Circus\". Of course the characters have to wear skimpy body suits, because yes. ( ͡° ͜ʖ ͡°)<br>Overall the game is pretty wholesome, the characters are neat, good humor, alright MC. Tl;dr: Go for it."
 }
